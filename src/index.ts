@@ -20,7 +20,7 @@ let hire : boolean = false;
 
 hire = true ; // we can change the value but it should be with the same type
 
-let all : any = "Muhamed Saleh" // the "any" dataType can hold any type of data and it looks like "var" in JS
+// let all : any = "Muhamed Saleh" // the "any" dataType can hold any type of data and it looks like "var" in JS
 
 // function add (n1:number,n2:number){
 //     return n1+n2;
@@ -30,3 +30,17 @@ let all : any = "Muhamed Saleh" // the "any" dataType can hold any type of data 
 //  console.log(add(4,"5")); //=> gives error because the inputs types diff from the initaliztion types 
 
  
+//////////// Type Annotaions with Arrays  //////////
+
+let all : (string | number | boolean) ;  // we can define more than one data type 
+
+all = "A";
+all = 100;
+all = true ; 
+
+let myFriends: string[] = ["osama","ahmed","Sayed"]  // we can define the array data type by this way 
+
+for (let i = 0; i < myFriends.length; i++) {
+    console.log(myFriends[i].repeat(3));
+        
+}
