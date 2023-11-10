@@ -14,6 +14,7 @@ var theName = "Muhaemd";
 var theAge = 22;
 var hire = false;
 //////// => we define the variable datatype in this way  ///////
+
 hire = true; // we can change the value but it should be with the same type
 var alll = "Muhamed Saleh"; // the "any" dataType can hold any type of data and it looks like "var" in JS
 function add(n1, n2) {
