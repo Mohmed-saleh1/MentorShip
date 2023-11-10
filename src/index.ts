@@ -32,15 +32,23 @@ hire = true ; // we can change the value but it should be with the same type
  
 //////////// Type Annotaions with Arrays  //////////
 
-let all : (string | number | boolean) ;  // we can define more than one data type 
+// let all : (string | number | boolean) ;  // we can define more than one data type 
 
-all = "A";
-all = 100;
-all = true ; 
+// all = "A";
+// all = 100;
+// all = true ; 
 
-let myFriends: string[] = ["osama","ahmed","Sayed"]  // we can define the array data type by this way 
+// let myFriends: string[] = ["osama","ahmed","Sayed"]  // we can define the array data type by this way 
 
-for (let i = 0; i < myFriends.length; i++) {
-    console.log(myFriends[i].repeat(3));
+// for (let i = 0; i < myFriends.length; i++) {
+//     console.log(myFriends[i].repeat(3));
         
-}
+// }
+
+
+////////////  Annotaions with Multidimensional Arrays  //////////
+
+let arrayOne: number[]=[1,2,3,4,5];
+let arrayTwo: string[]=['a','b','c'];
+let arrayThree: (number|string)[]=[1,2,3,4,5,"A","B","C"];
+let arrayFour: (number|string|string[]|boolean)[]=[1,2,3,4,5,"A","B",["C","D"],true,false];  // we can define the multidimentional array data type by this way 
