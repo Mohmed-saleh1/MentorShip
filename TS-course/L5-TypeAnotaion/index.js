@@ -15,3 +15,9 @@ var theAge = 22;
 var hire = false;
 //////// => we define the variable datatype in this way  ///////
 hire = true; // we can change the value but it should be with the same type
+var alll = "Muhamed Saleh"; // the "any" dataType can hold any type of data and it looks like "var" in JS
+function add(n1, n2) {
+    return n1 + n2;
+}
+console.log(add(4, 5)); //=> 9
+console.log(add(4, "5")); //=> gives error because the inputs types diff from the initaliztion types 
