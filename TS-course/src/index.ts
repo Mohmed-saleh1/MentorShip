@@ -38,19 +38,3 @@ let arrayTwo: string[]=['a','b','c'];
 let arrayThree: (number|string)[]=[1,2,3,4,5,"A","B","C"];
 let arrayFour: (number|string|string[]|boolean)[]=[1,2,3,4,5,"A","B",["C","D"],true,false];  // we can define the multidimentional array data type by this way 
 
-//////////// Type Annotaions with Functions  //////////
-
-
-let showMsg = true;
-
-function showDetails(name: string,age: number,salary: number) {
-
-    let test = 10;
-    if (showMsg) {
-    return `hello ${name},Age Is ${age},Salary Is ${salary} , Test Variable ${test}`
-    }
-    return `no data to show`
-}
-
-console.log(showDetails("Muhamed",22,10000));
-
