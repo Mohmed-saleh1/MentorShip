@@ -9,7 +9,7 @@ type Buttons = {
     down:string,
     left:string
 }
-type last = Buttons &{
+type last = Buttons & {
     x:boolean
 }
 function getActions(btns:last) {
