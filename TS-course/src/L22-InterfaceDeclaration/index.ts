@@ -1,19 +1,20 @@
 
 
-  interface User{
+  interface Usr{
     id:number,
     username:string,
     country:string,
   }
 
-  let user : User ={
+  let usr : Usr ={
     id:2,
     username:'muhamed',
-    country:'fayoum'
+    country:'fayoum',
+    
   }
 //   console.log(user);
   
-  function getData(data:User):void{
+  function gettData(data:Usr):void{
     console.log(`id is ${data.id}`);
     console.log(`username is ${data.username}`);
     console.log(`country is ${data.country}`);
