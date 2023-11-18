@@ -3,7 +3,7 @@
 
 let showMsg = true;
 
-function showDetails(name: string,age: number,salary: number) {
+function showDetails(name: string,age: number,salary: number) : string {
 
     let test = 10;
     if (showMsg) {

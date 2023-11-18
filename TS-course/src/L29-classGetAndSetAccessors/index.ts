@@ -27,7 +27,7 @@ class User {
     // }
   }
   
-  let userOne = new User("Elzero", 6000, "Cairo");
+  let userOne = new User("Muhamed", 6000, "Cairo");
   
   console.log(userOne.username);
   userOne.username = "Ahmed";
