@@ -2,10 +2,10 @@
 import { Request, Response } from 'express';
 import bcrypt from 'bcrypt';
 import jwt from 'jsonwebtoken';
-import  User  from '../models/userModel'; // Assuming you have a User model
+import  User  from '../models/userModel';   
 
 const saltRounds = 10;
-const jwtSecret = 'your_jwt_secret'; // Replace with your own secret key
+const jwtSecret = 'jwt_secret';  
 
 export const register = async (req: Request, res: Response) => {
   try {
