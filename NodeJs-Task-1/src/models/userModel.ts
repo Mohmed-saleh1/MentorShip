@@ -9,13 +9,14 @@ export interface User extends Document {
 const userSchema: Schema<User> = new Schema({
     name: String,
     email: {
+        required: true,
         type: String,
         unique: true,
     },
     password: {
         type: String,
         required: true,
-        minlength: 6,
+        minlength: [6,'the password length should be at least 6 chars'],
     },
 });
 
