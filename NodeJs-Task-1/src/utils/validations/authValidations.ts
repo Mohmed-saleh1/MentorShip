@@ -14,4 +14,8 @@ export const loginValidation = [
     check('password').isLength({ min: 6 }).withMessage('Password must be at least 6 characters long'),
   validationMiddleware]
 
+  export const getUserInfoValidation = [
+    check('userId').notEmpty().withMessage('User Id is required'),
+  validationMiddleware]
+
 
