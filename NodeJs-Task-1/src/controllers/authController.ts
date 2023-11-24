@@ -1,11 +1,10 @@
 import { Request, Response, NextFunction } from 'express';
 import bcrypt from 'bcrypt';
-import jwt from 'jsonwebtoken';
-import  User  from '../models/userModel';   
+ import  User  from '../models/userModel';
+ import { generateToken } from '../middlewares/coockies';
 
 const saltRounds = 10;
-const jwtSecret = 'jwt_secret';  
-
+ 
 export const register = async (req: Request, res: Response) => {
   try {
     const { name, email, password } = req.body;
@@ -46,34 +45,13 @@ export const login = async (req: Request, res: Response) => {
     }
 
     // Generate JWT token
-    const token = jwt.sign({ userId: user._id }, jwtSecret, { expiresIn: '1h' });
-
+    const token = generateToken(user)
     res.status(200).json({ message: 'Login successful', token });
   } catch (error) {
     res.status(500).json({ message: 'Server error' });
   }
 };
 
-export const auth = async (req: Request, res: Response, next: Function) => {
-  try {
-    const token = req.header('Authorization')?.replace('Bearer ', '');
-    if (!token) {
-      return res.status(401).json({ message: 'Authorization denied' });
-    }
-
-    // Verify JWT token
-    const decoded = jwt.verify(token, jwtSecret);
-    if (!decoded) {
-      return res.status(401).json({ message: 'Authorization denied' });
-    }
-
-    // Attach the user ID to the request object
-    (req as any).userId = (decoded as any).userId;
-    next();
-  } catch (error) {
-    res.status(500).json({ message: 'Server error' });
-  }
-};
 
 export async function getUserInfo(req: Request, res: Response, next: NextFunction) {
   try {

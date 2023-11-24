@@ -19,7 +19,7 @@ dbconnection();
 app.use('/api/users', routes);
 
 // Start the server
-const port = 3000;
+const port : number = process.env.PORT as unknown as number ||3000;
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
 });
